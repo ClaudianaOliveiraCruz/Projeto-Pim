@@ -1,0 +1,36 @@
+<h1>Dados do Aluno</h1>
+
+{{#each alunos}}
+
+<div class="card">
+  <form action="/update" method="POST">
+    <br>
+    <label id="icon"><i class="fa fa-user"></i>  Nome do Aluno: </label>
+    <input type="text" name="nome_aluno" value="{{nome_aluno}}"><br><br></input>
+    
+    <label id="icon"><i class="fa fa-numberic"></i>  Idade:</label>
+    <input type="number" name="idade_aluno" value="{{idade_aluno}}"><br><br>
+
+    <label id="icon"><i class="fa fa-envelope"></i>  Email:</label>
+    <input type="text" name="email_aluno" value="{{email_aluno}}"><br><br>
+
+    <label id="icon"><i class="fa fa-solid fa-key"></i>  Senha:</label>
+    <input type="password" name="senha_aluno" value="{{senha_aluno}}"><br><br>
+
+    <label id="icon"><i class=" fa fa-user-tie"></i>  Nome do Responsável:</label>
+    <input type="text" name="responsavel_aluno" value="{{responsavel_aluno}}"><br><br>
+
+    <label id="icon"><i class=" fa fa-user-tie-hair"></i>  Nome do Cuidador:</label>
+    <input type="text" name="cuidador_aluno" value="{{cuidador_aluno}}"><br><br>
+
+    <label id="icon"><i class=" fa-light fa-user-nurse"></i>  Nome do Psicólogo:</label>
+    <input type="text" name="psicologo_aluno" value="{{psicologo_aluno}}"><br><br>
+
+    
+    <div class = "btn">
+    <button type="submit"><i class="fa fa-paper-plane"></i>  Atualizar Cadastro do Aluno</button>
+    </div>
+    
+</input>
+</div>
+{{/each}}
