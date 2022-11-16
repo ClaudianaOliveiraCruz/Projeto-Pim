@@ -1,0 +1,90 @@
+
+<HTML>
+
+	<HEAD>
+    <TITLE>Exibir Data e Hora em HTML </TITLE>
+		<script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+
+		<script type="text/javascript">
+			jQuery(window).load(function($){
+				atualizaRelogio();
+			});
+		</script>
+    
+
+	</HEAD>
+	<BODY>
+
+<div class="menu-holder">
+  <a href="aluno"><div class="menu-item">Dados Aluno</div></a>
+  <a href="relatorio"><div class="menu-item">Relatório</div></a>
+  <a href=""><div class="menu-item">Site</div></a>
+  <a href=""><div class="menu-item">Contatos</div></a>
+</div>
+
+    <h2 style="text-align: center;">Relatório</h2><br>
+
+          <div style="text-align: center;">
+            
+                <form action="" method="POST">
+
+                  <label id="nome_aluno"> Nome do Aluno(a): {{nome_aluno}}</label>
+                  
+                  <label id="idade_aluno"> Idade: {{idade_aluno}}</label>
+
+                  <label id="nome_cuidador"> Cuidador do Aluno(a): {{nome_cuidador}}</label>
+
+                  <label id="date"> data: <output id="data"></output></label><br>
+
+                  <label>Percepção do cuidador:</label><br>
+                  <div>
+                        <textarea style=" box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
+                        position: relative;
+                        padding: 15px;
+                        border-radius: 5px;
+                        width: 400px;
+                        height: 100px;
+                        margin: 0 auto;" placeholder="Digite sua mensagem"> </textarea>
+                  </div><br>
+                
+
+                  <div class = "btn">
+                  <input type="submit" value="Gerar relatório">
+                  </div>
+                  
+                  </form>
+
+          </div>
+
+
+	</BODY>
+
+	<script>
+		function atualizaRelogio(){ 
+			var momentoAtual = new Date();
+			
+			var vhora = momentoAtual.getHours();
+			var vminuto = momentoAtual.getMinutes();
+			var vsegundo = momentoAtual.getSeconds();
+			
+			var vdia = momentoAtual.getDate();
+			var vmes = momentoAtual.getMonth() + 1;
+			var vano = momentoAtual.getFullYear();
+			
+			if (vdia < 10){ vdia = "0" + vdia;}
+			if (vmes < 10){ vmes = "0" + vmes;}
+			if (vhora < 10){ vhora = "0" + vhora;}
+			if (vminuto < 10){ vminuto = "0" + vminuto;}
+			if (vsegundo < 10){ vsegundo = "0" + vsegundo;}
+
+			dataFormat = vdia + " / " + vmes + " / " + vano;
+			horaFormat = vhora + " : " + vminuto + " : " + vsegundo;
+
+			document.getElementById("data").innerHTML = dataFormat;
+			document.getElementById("hora").innerHTML = horaFormat;
+
+			setTimeout("atualizaRelogio()",1000);
+		}
+	</script>	
+</HTML>
+
