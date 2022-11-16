@@ -17,10 +17,35 @@ app.use(bodyParser.json())
 app.get("/style", function(req, res){
     res.sendFile(__dirname + '/css/style.css');
 });
+app.get("/menu", function(req, res){
+    res.sendFile(__dirname + '/css/menu.css');
+});
 
-/*app.get('/', function(req, res){
+
+app.get('/', function(req, res){
     res.render('login');
-});*/
+});
+
+app.get('/relatorio', function(req, res){
+    res.render('relatorio');
+});
+
+app.post('/funcao', function(req, res){
+
+    const cadastrar = req.body.cadastrar
+    const login = req.body.login
+
+    if(cadastrar){
+        res.redirect('cad-aluno');
+    }
+
+    if(login){
+        Aluno.findAll().then(function(alunos){
+            res.render('aluno', {alunos: alunos});
+        });
+    }
+    
+});
 
 app.get('/aluno', function(req, res){
     //Listar todos os alunos
@@ -50,8 +75,9 @@ app.post('/add-aluno', function(req, res){
     }).catch(function(erro){
         res.send("Erro: não foi possivel cadastrar Aluno" + erro)
     })
-    //res.send("Nome: " + req.body.nome + "<br>Valor: " + req.body.valor + "<br>") 
+    
 });
+
 
 
 
