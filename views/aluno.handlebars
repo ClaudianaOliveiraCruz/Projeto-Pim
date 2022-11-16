@@ -1,10 +1,17 @@
-<h1>Dados do Aluno</h1>
+<div class="menu-holder">
+  <a href="aluno"><div class="menu-item">Dados Aluno</div></a>
+  <a href="relatorio"><div class="menu-item">Relatório</div></a>
+  <a href=""><div class="menu-item">Site</div></a>
+  <a href=""><div class="menu-item">Contatos</div></a>
+</div>
 
 {{#each alunos}}
 
 <div class="card">
-  <form action="/update" method="POST">
-    <br>
+  <h2 style="text-align: center;">Dados do Aluno</h2><br>
+  
+  <form action="" method="POST">
+
     <label id="icon"><i class="fa fa-user"></i>  Nome do Aluno: </label>
     <input type="text" name="nome_aluno" value="{{nome_aluno}}"><br><br></input>
     
@@ -28,7 +35,7 @@
 
     
     <div class = "btn">
-    <button type="submit"><i class="fa fa-paper-plane"></i>  Atualizar Cadastro do Aluno</button>
+    <input type="submit" value="Atualizar Cadastro do Aluno">
     </div>
     
 </input>
