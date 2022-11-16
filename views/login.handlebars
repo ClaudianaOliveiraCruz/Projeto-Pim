@@ -1,18 +1,21 @@
 <div class="container">
+
+
 <h2 class="title">Login</h2>
 
 <div class="card">
 
-<form action="" method="POST">
+<form action="/funcao" method="post">
     <br>
-    <label id="icon"><i class="fa fa-envelope"></i>  Email:</label>
-    <input type="text" name="email_aluno"><br>
+    <label id="icon"><i class="fa fa-envelope"></i>  Email:</label><br>
+    <input type="text" name="email_aluno" placeholder="Digite o email"><br>
     
-    <label id="icon"><i class="fa fa-key"></i>  Senha</label>
-    <input type="password" name="senha_aluno"><br><br>
+    <label id="icon"><i class="fa fa-key"></i>  Senha</label><br>
+    <input type="password" name="senha_aluno" placeholder="Digite a senha"><br>
     
     <div class = "btn">
-    <button type="submit"><i class="fa fa-paper-plane"></i>  Entrar</button>
+    <input type="submit" name="login" value="Login"><br><br>
+    <input type="submit" name="cadastrar" value="Cadastrar Aluno"><br><br>
     </div>
     
 </form>
