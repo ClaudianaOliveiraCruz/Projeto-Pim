@@ -5,12 +5,16 @@
   <a href=""><div class="menu-item">Contatos</div></a>
 </div>
 
-{{#each alunos}}
+{{#each lista}}
+
+
 
 <div class="card">
   <h2 style="text-align: center;">Dados do Aluno</h2><br>
   
-  <form action="" method="POST">
+  <form action="update-aluno" method="POST">
+
+    <input type="hidden" name="id_aluno" value="{{id_aluno}}"><br><br></input>
 
     <label id="icon"><i class="fa fa-user"></i>  Nome do Aluno: </label>
     <input type="text" name="nome_aluno" value="{{nome_aluno}}"><br><br></input>
@@ -35,7 +39,8 @@
 
     
     <div class = "btn">
-    <input type="submit" value="Atualizar Cadastro do Aluno">
+    <input name="atualizar" type="submit" value="Atualizar Cadastro do Aluno">
+    <input name="deletar" type="submit" value="Deletar Aluno">
     </div>
     
 </input>
