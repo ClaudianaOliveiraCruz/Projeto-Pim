@@ -10,7 +10,7 @@
 <h2>Demonstração da Aplicação: </h2>
 
 
-<a href="https://drive.google.com/file/d/1jwspl76BrOI43_48w5hTFxsYC7n-Wd0b/view?usp=sharing" target="_blank">Acompanhe-TEA</a>
+<a target="_blank" href="https://drive.google.com/file/d/1jwspl76BrOI43_48w5hTFxsYC7n-Wd0b/view?usp=sharing">Acompanhe-TEA</a>
 
 
 
