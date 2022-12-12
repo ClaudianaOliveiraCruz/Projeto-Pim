@@ -7,10 +7,10 @@
   Clicando no botão <b>"CUIDADORES"</b> você que é o cuidador da criança neuroatípica poderá ter acesso ao site onde existe um acervo de orientações reais e com respaldo profissional em respeito a como lidar com os cuidados do indivíduo e sobre as competências de sua profissão. <p>
 
 
-<h2>Aplicação: </h2>
+<h2>Demonstração da Aplicação: </h2>
 
 
-<a href="https://drive.google.com/drive/u/0/folders/187yFP8xRKtqR-Y75An_OIkc5WQd90cIh">link</a>
+<a href="https://drive.google.com/file/d/1jwspl76BrOI43_48w5hTFxsYC7n-Wd0b/view?usp=sharing" target="_blank">Acompanhe-TEA</a>
 
 
 
