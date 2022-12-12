@@ -1,13 +1,14 @@
+
 <div class="menu-holder">
-  <a href="aluno"><div class="menu-item">Dados Aluno</div></a>
+  <a href="#"><div class="menu-item">Dados Aluno</div></a>
   <a href="relatorio"><div class="menu-item">Relatório</div></a>
-  <a href=""><div class="menu-item">Site</div></a>
-  <a href=""><div class="menu-item">Contatos</div></a>
+  <a href="cuidador" target="_blank"><div class="menu-item">Cuidador</div></a>
+  <a href="pais" target="_blank"><div class="menu-item">Pais</div></a>
+  <a href="sobre" target="_blank"><div class="menu-item">Sobre</div></a>
+  <a href="/"><div class="menu-item">Sair</div></a>
 </div>
 
 {{#each lista}}
-
-
 
 <div class="card">
   <h2 style="text-align: center;">Dados do Aluno</h2><br>
@@ -17,10 +18,10 @@
     <input type="hidden" name="id_aluno" value="{{id_aluno}}"><br><br></input>
 
     <label id="icon"><i class="fa fa-user"></i>  Nome do Aluno: </label>
-    <input type="text" name="nome_aluno" value="{{nome_aluno}}"><br><br></input>
-    
-    <label id="icon"><i class="fa fa-numberic"></i>  Idade:</label>
-    <input type="number" name="idade_aluno" value="{{idade_aluno}}"><br><br>
+    <input type="text" name="nome_aluno" value="{{nome_aluno}}"><br><br></input> 
+
+    <label id="icon"><i class="fa fa-numberic"></i>  idade aluno:</label>
+    <input type="text" name="idade_aluno" value="{{idade_aluno}}"><br><br>
 
     <label id="icon"><i class="fa fa-envelope"></i>  Email:</label>
     <input type="text" name="email_aluno" value="{{email_aluno}}"><br><br>
