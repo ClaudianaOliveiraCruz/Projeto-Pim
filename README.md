@@ -14,6 +14,9 @@
 
 
 
-
-
 <b>Ferramentas Utilizadas:</b>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/42771666/207141198-2cd41078-ba99-4a25-91a3-87fd01923ce7.png" width="150">
+</p>
+
