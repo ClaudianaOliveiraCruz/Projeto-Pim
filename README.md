@@ -1,1 +1,2 @@
-[App de acompanhamento da criança neuroatípica por meio de relatórios..pdf](https://github.com/ClaudianaOliveiraCruz/Projeto-Pim/files/10210911/App.de.acompanhamento.da.crianca.neuroatipica.por.meio.de.relatorios.pdf)
+<h1> ACOMPANHE-TEA - App de acompanhamento da criança neuroatípica por meio de relatórios </h1><hr>
+<p>APLICAÇÃO WEB QUE TENTA SANAR E FACILITAR O PROCESSO DE COMUNICAÇÃO ENTRE PAIS, CUIDADORES E PSICÓLOGOS TENDO EM VISTA QUE PARA O SEU USO HAVERÁ UM ACORDO ENTRE AS TRÊS PARTES PARA O COMPARTILHAMENTO DE UMA CONTA ONDE NESSE APP HAVERÁ ACESSO AOS RELATÓRIOS GERADOS SOBRE A CRIANÇA E OUTROS TÓPICOS AUXILIARES.</p>
