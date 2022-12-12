@@ -1,88 +1,168 @@
 <HTML>
 
-	<HEAD>
+  <HEAD>
     <TITLE>Exibir Data e Hora em HTML </TITLE>
-		<script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
 
-		<script type="text/javascript">
-			jQuery(window).load(function($){
-				atualizaRelogio();
-			});
-		</script>
-    
+    <script type="text/javascript">
+      jQuery(window).load(function($){ atualizaRelogio(); });
 
-	</HEAD>
-	<BODY>
+    </script>
 
-<div class="menu-holder">
-  <a href="aluno"><div class="menu-item">Dados Aluno</div></a>
-  <a href="relatorio"><div class="menu-item">Relatório</div></a>
-  <a href=""><div class="menu-item">Site</div></a>
-  <a href=""><div class="menu-item">Contatos</div></a>
-</div>
+  </HEAD>
+  <BODY>
 
-    <h2 style="text-align: center;">Relatório</h2><br>
+    {{#each lista}}
 
-          <div style="text-align: center;">
-            
-                <form action="" method="POST">
+      <div class="menu-holder">
+        <a href="aluno"><div class="menu-item">Dados Aluno</div></a>
+        <a href="relatorio"><div class="menu-item">Relatório</div></a>
+        <a href="cuidador" target="_blank"><div class="menu-item">Cuidador</div></a>
+        <a href="pais" target="_blank"><div class="menu-item">Pais</div></a>
+        <a href="sobre" target="_blank"><div class="menu-item">Sobre</div></a>
+        <a href="/"><div class="menu-item">Sair</div></a>
+      </div>
 
-                  <label id="nome_aluno"> Nome do Aluno(a): {{nome_aluno}}</label>
-                  
-                  <label id="idade_aluno"> Idade: {{idade_aluno}}</label>
+      <h2 style="text-align: center;">Relatório</h2><br />
 
-                  <label id="nome_cuidador"> Cuidador do Aluno(a): {{nome_cuidador}}</label>
+      <div style="text-align: center;">
 
-                  <label id="date"> data: <output id="data"></output></label><br>
+        <form action="/pdf" method="post">
 
-                  <label>Percepção do cuidador:</label><br>
-                  <div>
-                        <textarea style=" box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
+          <label> Nome do Aluno(a): {{nome_aluno}}</label>
+          <input name="nome_aluno" type="hidden" value="{{nome_aluno}}" />
+
+          <label id="cuidador_aluno" name="cuidador_aluno">
+            Cuidador do Aluno(a):
+            {{cuidador_aluno}}</label>
+          <input
+            name="cuidador_aluno"
+            type="hidden"
+            value="{{cuidador_aluno}}"
+          />
+
+          <label id="date">
+            data:
+            <output name="data_aluno" id="data"></output></label><br />
+
+          <input
+            style="text-align: center;"
+            name="data_aluno"
+            id="id_01"
+            type="hidden"
+          />
+          <script>
+            var today = new Date(); var dy = today.getDate(); var mt =
+            today.getMonth()+1; var yr = today.getFullYear();
+            document.getElementById('id_01').value= dy+"/"+mt+"/"+yr;
+          </script>
+
+          <label>Emocional Afetivo:</label><br />
+          <div>
+            <textarea
+              style=" box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
                         position: relative;
                         padding: 15px;
                         border-radius: 5px;
                         width: 400px;
                         height: 100px;
-                        margin: 0 auto;" placeholder="Digite sua mensagem"> </textarea>
-                  </div><br>
-                
+                        margin: 0 auto;"
+              placeholder="Digite sua mensagem"
+              name="emocional"
+            > </textarea>
+          </div><br />
 
-                  <div class = "btn">
-                  <input type="submit" value="Gerar relatório">
-                  </div>
-                  
-                  </form>
+          <label>Relacionamento Social:</label><br />
+          <div>
+            <textarea
+              style=" box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
+                        position: relative;
+                        padding: 15px;
+                        border-radius: 5px;
+                        width: 400px;
+                        height: 100px;
+                        margin: 0 auto;"
+              placeholder="Digite sua mensagem"
+              name="relacionamento"
+            > </textarea>
+          </div><br />
 
+          <label>Psicomotor:</label><br />
+          <div>
+            <textarea
+              style=" box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
+                        position: relative;
+                        padding: 15px;
+                        border-radius: 5px;
+                        width: 400px;
+                        height: 100px;
+                        margin: 0 auto;"
+              placeholder="Digite sua mensagem"
+              name="psicomotor"
+            > </textarea>
+          </div><br />
+
+          <label>Escrita e Fala:</label><br />
+          <div>
+            <textarea
+              style=" box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
+                        position: relative;
+                        padding: 15px;
+                        border-radius: 5px;
+                        width: 400px;
+                        height: 100px;
+                        margin: 0 auto;"
+              placeholder="Digite sua mensagem"
+              name="escritafala"
+            > </textarea>
+          </div><br />
+
+          <label>Percepção do cuidador:</label><br />
+          <div>
+            <textarea
+              style=" box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
+                        position: relative;
+                        padding: 15px;
+                        border-radius: 5px;
+                        width: 400px;
+                        height: 100px;
+                        margin: 0 auto;"
+              placeholder="Digite sua mensagem"
+              name="percepcaoCuidador"
+            > </textarea>
+          </div><br />
+
+          
+
+          <div class="btn">
+            <input name="gerar" type="submit" value="Gerar Relatório" />
           </div>
 
+          <br />
 
-	</BODY>
+          <div class="btn">
+            <a href="/relatoriopdf" target="_blank"> Visualizar PDF</a>
+          </div>
 
-	<script>
-		function atualizaRelogio(){ 
-			var momentoAtual = new Date();
-			
-			var vhora = momentoAtual.getHours();
-			var vminuto = momentoAtual.getMinutes();
-			var vsegundo = momentoAtual.getSeconds();
-			
-			var vdia = momentoAtual.getDate();
-			var vmes = momentoAtual.getMonth() + 1;
-			var vano = momentoAtual.getFullYear();
-			
-			if (vdia < 10){ vdia = "0" + vdia;}
-			if (vmes < 10){ vmes = "0" + vmes;}
-			if (vhora < 10){ vhora = "0" + vhora;}
-			if (vminuto < 10){ vminuto = "0" + vminuto;}
-			if (vsegundo < 10){ vsegundo = "0" + vsegundo;}
+        </form>
 
-			dataFormat = vdia + " / " + vmes + " / " + vano;
-			horaFormat = vhora + " : " + vminuto + " : " + vsegundo;
+      </div>
 
-			document.getElementById("data").innerHTML = dataFormat;
-			document.getElementById("hora").innerHTML = horaFormat;
+    {{/each}}
+  </BODY>
 
-			setTimeout("atualizaRelogio()",1000);
-		}
-	</script>	
+  <script>
+    function atualizaRelogio(){ var momentoAtual = new Date(); var vhora =
+    momentoAtual.getHours(); var vminuto = momentoAtual.getMinutes(); var
+    vsegundo = momentoAtual.getSeconds(); var vdia = momentoAtual.getDate(); var
+    vmes = momentoAtual.getMonth() + 1; var vano = momentoAtual.getFullYear();
+    if (vdia < 10){ vdia = "0" + vdia;} if (vmes < 10){ vmes = "0" + vmes;} if
+    (vhora < 10){ vhora = "0" + vhora;} if (vminuto < 10){ vminuto = "0" +
+    vminuto;} if (vsegundo < 10){ vsegundo = "0" + vsegundo;} dataFormat = vdia
+    + " / " + vmes + " / " + vano; horaFormat = vhora + " : " + vminuto + " : "
+    + vsegundo; document.getElementById("data").innerHTML = dataFormat;
+    document.getElementById("hora").innerHTML = horaFormat;
+    setTimeout("atualizaRelogio()",1000); }
+
+  </script>
 </HTML>
